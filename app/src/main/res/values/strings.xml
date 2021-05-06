@@ -1,13 +1,21 @@
 <resources>
-    <string name="app_name">Ferry</string>
+    <string name="app_name">Climbing Grade Converter</string>
     <string name="txtTitle">Catalina Ferry Tickets</string>
     <string name="prompt">Select Group</string>
-    <string name="btnCost">COMPUTE COST</string>
-    <string name="txtTickets">Number of Tickets</string>
-    <string name="description">Ferry Image</string>
+    <string name="btnCost">Convert</string>
+    <string name="txtTickets">Input Grade</string>
+    <string name="selectType">Type of climbing </string>
     <string name="action_settings">Settings</string>
-    <string-array name="txtGroup">
-        <item>To Catalina Island</item>
-        <item>To Long Beach</item>
+    <string-array name="boulderRoute">
+        <item> Bouldering </item>
+        <item> Route Climbing</item>
+    </string-array>
+    <string-array name="txtGroupBouldering">
+        <item>Hueco to Fontainebleau</item>
+        <item>Fontainebleau to Hueco</item>
+    </string-array>
+    <string-array name="txtGroupRoute">
+        <item>YDS to French</item>
+        <item>French to YDS</item>
     </string-array>
 </resources>
