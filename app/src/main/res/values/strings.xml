@@ -6,7 +6,8 @@
     <string name="txtTickets">Input Grade</string>
     <string name="selectType">Type of climbing </string>
     <string name="action_settings">Settings</string>
-
+    <string name="selectGrade">Grade</string>
+    <string name="selectConversion">Conversion</string>
     <string-array name="boulderRoute">
         <item> Bouldering </item>
         <item> Route Climbing</item>
