@@ -47,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapterFont = ArrayAdapter.createFromResource(this, R.array.txtFont, android.R.layout.simple_spinner_item);
         adapterBouldering.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        ArrayAdapter<CharSequence> adapterFrench = ArrayAdapter.createFromResource(this, R.array.txtFrench, android.R.layout.simple_spinner_item);
+        adapterBouldering.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        ArrayAdapter<CharSequence> adapterYDS = ArrayAdapter.createFromResource(this, R.array.txtYDS, android.R.layout.simple_spinner_item);
+        adapterBouldering.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -81,6 +87,14 @@ public class MainActivity extends AppCompatActivity {
 
                 if (selectedValue.equals("Fontainebleau to Hueco")){
                     grade.setAdapter(adapterFont);
+                }
+
+                if (selectedValue.equals("YDS to French")){
+                    grade.setAdapter(adapterYDS);
+                }
+
+                if (selectedValue.equals("French to YDS")){
+                    grade.setAdapter(adapterFrench);
                 }
             }
 
