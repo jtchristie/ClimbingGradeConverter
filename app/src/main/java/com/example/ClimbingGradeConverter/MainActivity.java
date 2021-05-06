@@ -16,13 +16,16 @@ public class MainActivity extends AppCompatActivity {
     int gradeString;
     double totalCost;
     String groupChoice;
+    String[] hueco = new String[] {"VB","V0", "V1", "V2", "V3" , "V4", "V5", "V6", "V7", "V8","V9","V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17" };
+    String[] font = new String[] {"3","4","5","5+","6A"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final EditText grade = (EditText)findViewById(R.id.txtGrade);
         final Spinner type = (Spinner)findViewById(R.id.type);
         final Spinner conversion = (Spinner)findViewById(R.id.conversion);
+        final Spinner grade = (Spinner)findViewById(R.id.grade);
         final TextView result = ((TextView) findViewById(R.id.txtResult));
 
 
@@ -33,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
         adapterBouldering.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         ArrayAdapter<CharSequence> adapterRoute = ArrayAdapter.createFromResource(this, R.array.txtGroupRoute, android.R.layout.simple_spinner_item);
+        adapterBouldering.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        ArrayAdapter<CharSequence> adapterHueco = ArrayAdapter.createFromResource(this, R.array.txtHueco, android.R.layout.simple_spinner_item);
+        adapterBouldering.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        ArrayAdapter<CharSequence> adapterFont = ArrayAdapter.createFromResource(this, R.array.txtFont, android.R.layout.simple_spinner_item);
         adapterBouldering.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -57,13 +66,34 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        conversion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedValue = parentView.getSelectedItem().toString();
+
+
+                if (selectedValue.equals("Hueco to Fontainebleau")){
+                    grade.setAdapter(adapterHueco);
+                }
+
+                if (selectedValue.equals("Fontainebleau to Hueco")){
+                    grade.setAdapter(adapterFont);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
+
         cost.setOnClickListener(new View.OnClickListener(){
             final TextView result = ((TextView)findViewById(R.id.txtResult));
             @Override
             public void onClick(View v){
-                gradeString = Integer.parseInt(grade.getText().toString());
-                result.setText(gradeString);
-
+                groupChoice = conversion.getSelectedItem().toString();
+                result.setText(groupChoice + " " + gradeString);
             }
         });
     }

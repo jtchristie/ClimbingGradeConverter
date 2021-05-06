@@ -6,6 +6,7 @@
     <string name="txtTickets">Input Grade</string>
     <string name="selectType">Type of climbing </string>
     <string name="action_settings">Settings</string>
+
     <string-array name="boulderRoute">
         <item> Bouldering </item>
         <item> Route Climbing</item>
@@ -17,5 +18,45 @@
     <string-array name="txtGroupRoute">
         <item>YDS to French</item>
         <item>French to YDS</item>
+    </string-array>
+    <string-array name="txtHueco">
+        <item>VB</item>
+        <item>V1</item>
+        <item>V2</item>
+        <item>V3</item>
+        <item>V4</item>
+        <item>V5</item>
+        <item>V6</item>
+        <item>V7</item>
+        <item>V8</item>
+        <item>V9</item>
+        <item>V10</item>
+        <item>V11</item>
+        <item>V12</item>
+        <item>V13</item>
+        <item>V14</item>
+        <item>V15</item>
+        <item>V16</item>
+        <item>V17</item>
+    </string-array>
+
+    <string-array name="txtFont">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5+</item>
+        <item>6A/6A+</item>
+        <item>6B/6B+</item>
+        <item>6C/6C+</item>
+        <item>7A</item>
+        <item>7A+</item>
+        <item>7B/7B+</item>
+        <item>7B+/7C</item>
+        <item>8A</item>
+        <item>8B</item>
+        <item>8B+</item>
+        <item>8C</item>
+        <item>8C+</item>
+        <item>9A</item>
     </string-array>
 </resources>

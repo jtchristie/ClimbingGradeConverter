@@ -6,24 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/txtGrade"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:ems="10"
-        android:hint="@string/txtTickets"
-        android:inputType="number"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conversion" />
-
     <Spinner
         android:id="@+id/conversion"
         android:layout_width="304dp"
@@ -37,6 +19,20 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type" />
+
+    <Spinner
+        android:id="@+id/grade"
+        android:layout_width="304dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:entries="@array/txtHueco"
+        android:gravity="center"
+        android:spinnerMode="dialog"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conversion" />
 
     <Spinner
         android:id="@+id/type"
@@ -56,13 +52,13 @@
         android:id="@+id/btnCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="32dp"
         android:text="@string/btnCost"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtGrade" />
+        app:layout_constraintTop_toBottomOf="@+id/grade" />
 
     <TextView
         android:id="@+id/txtResult"
