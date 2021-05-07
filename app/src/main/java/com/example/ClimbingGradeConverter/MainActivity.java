@@ -127,13 +127,13 @@ public class MainActivity extends AppCompatActivity {
                 gradeIndex=  grade.getSelectedItemPosition();
 
                 if (conversionChoice.equals("Hueco to Fontainebleau")){
-                    result.setText(conversionChoice + " " + font[gradeIndex]);
+                    result.setText(hueco[gradeIndex] + " Hueco is " + font[gradeIndex] + " Fontainbleau");
                 } else if (conversionChoice.equals("Fontainebleau to Hueco")) {
-                    result.setText(conversionChoice + " " + hueco[gradeIndex]);
+                    result.setText(font[gradeIndex] + " Fontainbleau is " + hueco[gradeIndex] + " Hueco");
                 } else if (conversionChoice.equals("YDS to French")){
-                    result.setText(conversionChoice + " " + french[gradeIndex]);
+                    result.setText(YDS[gradeIndex] + " YDS is "  + french[gradeIndex] + " French");
                 } else if (conversionChoice.equals("French to YDS")){
-                    result.setText(conversionChoice + " " + YDS[gradeIndex]);
+                    result.setText( french[gradeIndex] + " French is " +  YDS[gradeIndex] + " in YDS");
                 }
             }
         });
