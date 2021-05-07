@@ -12,9 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    double costPerTicket = 34;
-    int gradeString;
-    double totalCost;
     String conversionChoice;
     String gradeChoice;
     int gradeIndex;
@@ -127,11 +124,11 @@ public class MainActivity extends AppCompatActivity {
                 gradeIndex=  grade.getSelectedItemPosition();
 
                 if (conversionChoice.equals("Hueco to Fontainebleau")){
-                    result.setText(hueco[gradeIndex] + " Hueco is " + font[gradeIndex] + " Fontainbleau");
+                    result.setText(hueco[gradeIndex] + " Hueco is " + font[gradeIndex] + " in Fontainebleau");
                 } else if (conversionChoice.equals("Fontainebleau to Hueco")) {
-                    result.setText(font[gradeIndex] + " Fontainbleau is " + hueco[gradeIndex] + " Hueco");
+                    result.setText(font[gradeIndex] + " Fontainebleau is " + hueco[gradeIndex] + " in Hueco");
                 } else if (conversionChoice.equals("YDS to French")){
-                    result.setText(YDS[gradeIndex] + " YDS is "  + french[gradeIndex] + " French");
+                    result.setText(YDS[gradeIndex] + " YDS is "  + french[gradeIndex] + " in French");
                 } else if (conversionChoice.equals("French to YDS")){
                     result.setText( french[gradeIndex] + " French is " +  YDS[gradeIndex] + " in YDS");
                 }
